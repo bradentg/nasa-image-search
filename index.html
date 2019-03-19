@@ -10,11 +10,35 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
+  <p id="test">testing</p>
+
   <h1>NASA Image Search</h1>
   <div class="big-search-container">
     <input id="big-search-bar" type="text" placeholder="Explore the universe...">
   </div>
   <button id="go">Go</button>
+
+
+  <script>
+      var goButton = document.getElementById('go');
+      window.onload = function() {
+        if (searchBar.value == ""){
+          goButton.disabled = true;
+        } else {
+          goButton.disabled = false;
+        }
+
+      }
+      var searchBar = document.getElementById('big-search-bar');
+      searchBar.oninput = function(){
+        if (searchBar.value != ""){
+          goButton.disabled = false;
+        } else {
+          goButton.disabled = true;
+        }
+      }
+
+  </script>
 
 </body>
 </html>
