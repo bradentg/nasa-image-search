@@ -8,6 +8,7 @@
   <!-- production version, optimized for size and speed -->
   <!-- script src="https://cdn.jsdelivr.net/npm/vue"></script -->
   <link rel="stylesheet" href="index.css">
+
 </head>
 <body>
 
@@ -17,27 +18,6 @@
   </div>
   <button id="go">Go</button>
 
-
-  <script>
-      var goButton = document.getElementById('go');
-      window.onload = function() {
-        if (searchBar.value == ""){
-          goButton.disabled = true;
-        } else {
-          goButton.disabled = false;
-        }
-
-      }
-      var searchBar = document.getElementById('big-search-bar');
-      searchBar.oninput = function(){
-        if (searchBar.value != ""){
-          goButton.disabled = false;
-        } else {
-          goButton.disabled = true;
-        }
-      }
-
-  </script>
-
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
