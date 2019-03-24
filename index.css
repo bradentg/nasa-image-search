@@ -60,6 +60,14 @@ h1 {
   position: relative;
   height: 100%;
   background-color: white;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.image-result {
+  height: 200px;
+  margin: 5px;
 }

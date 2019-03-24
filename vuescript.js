@@ -37,7 +37,7 @@ var resultsApp = new Vue({
     searchData: JSON.parse(window.localStorage.getItem("localStore")).searchData, //get same searchData from previous page
     searchResults: ''
   },
-  mounted () {
+  mounted () { // Wait until vue instance is mounted to query NASA's API
     axios
       .get('https://images-api.nasa.gov/search?q=' + this.searchData.searchTerm)
       .then(response => (this.searchResults = response.data.collection.items))
@@ -45,6 +45,9 @@ var resultsApp = new Vue({
   methods: {
     displayMetadata: function() {
 
+    },
+    newSearch: function() {
+      window.location.href="index.html"
     }
   }
 })
@@ -52,5 +55,5 @@ var resultsApp = new Vue({
 // New vue component for displaying images
 Vue.component('image-results', {
   props: ['search_item'],
-  template: '<img :src="search_item.links[0].href" style="height: 200px;"/>'
+  template: '<img :src="search_item.links[0].href" class="image-result"/>'
 })
