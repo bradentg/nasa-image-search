@@ -14,9 +14,9 @@
 <body>
   <h1>NASA Image Search</h1>
   <div id="bar-button-container">
-    <p> For testing: {{ searchTerm }} </p>
+    <p> For testing: {{ searchData.searchTerm }} </p>
     <div class="big-search-container">
-      <input v-model="searchTerm" id="big-search-bar" type="text" placeholder="Explore the universe...">
+      <input v-model="searchData.searchTerm" id="big-search-bar" type="text" placeholder="Explore the universe...">
     </div>
 
     <button id="go" v-on:click="buttonAction" v-bind:disabled="isButtonDisabled">Go</button>

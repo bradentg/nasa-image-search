@@ -1,7 +1,13 @@
+let store = {
+  searchData: {
+    searchTerm: ''
+  }
+}
+
 var bigSearch = new Vue({
   el: '#bar-button-container',
   data: {
-    searchTerm: '',
+    searchData: store.searchData,
     isButtonDisabled: true
   },
   methods: {
@@ -11,8 +17,8 @@ var bigSearch = new Vue({
   },
   watch: {
     // Button should only be enabled when search box is not empty
-    searchTerm: function() {
-      if(this.searchTerm != ''){
+    'searchData.searchTerm': function() {
+      if(this.searchData.searchTerm != ''){
         this.isButtonDisabled = false;
       } else {
         this.isButtonDisabled = true;
