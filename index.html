@@ -5,19 +5,25 @@
   <meta charset = "UTF-8" />
   <!-- development version, includes helpful console warnings -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
   <!-- production version, optimized for size and speed -->
   <!-- script src="https://cdn.jsdelivr.net/npm/vue"></script -->
   <link rel="stylesheet" href="index.css">
 
 </head>
 <body>
-
   <h1>NASA Image Search</h1>
-  <div class="big-search-container">
-    <input id="big-search-bar" type="text" placeholder="Explore the universe...">
-  </div>
-  <button id="go">Go</button>
+  <div id="bar-button-container">
+    <p> For testing: {{ searchTerm }} </p>
+    <div class="big-search-container">
+      <input v-model="searchTerm" id="big-search-bar" type="text" placeholder="Explore the universe...">
+    </div>
 
-  <script type="text/javascript" src="script.js"></script>
+    <button id="go" v-on:click="buttonAction" v-bind:disabled="isButtonDisabled">Go</button>
+
+  </div>
+
+  <script type="text/javascript" src="vuescript.js"></script>
+  <!--<script type="text/javascript" src="script.js"></script>-->
 </body>
 </html>
