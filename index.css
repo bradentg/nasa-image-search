@@ -75,3 +75,11 @@ h1 {
   background-color: white;
 
 }
+
+#no-results {
+  position: absolute;
+  font-size: 12px;
+  left: 20px;
+  top: 20px;
+  color: black;
+}

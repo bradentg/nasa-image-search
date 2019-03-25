@@ -24,7 +24,7 @@
     <div id="results-display">
       <!-- A vue component to display all images found in the data returned by the search query in nasa's archive -->
       <image-results v-for="item in searchResults" v-bind:search_item="item"></image-results>
-      <p id="no-results"></p>
+      <p id="no-results">No results found</p>
     </div>
 
     <div id="image-metadata" style="visibility: hidden">

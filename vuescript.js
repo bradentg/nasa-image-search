@@ -72,6 +72,9 @@ Vue.component('image-results', {
       resultsDisplay: document.getElementById('results-display')
     }
   },
+  beforeCreate: function() {
+    document.getElementById('no-results').style.visibility = "hidden";
+  },
   methods: {
     displayMetadata: function() {
       var resultsDisplayCopy = this.resultsDisplay.cloneNode(true);
