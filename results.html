@@ -17,14 +17,24 @@
 <body>
   <div id="results-app">
     <div id="minimized-search-container">
-      <p style="display: inline">You searched for: {{ searchData.searchTerm }}</p>
+      <p style="display: inline">You searched for: {{ searchData.searchTerm }}. Click an image for more info.</p>
       <button v-on:click="newSearch">Start a new search</button>
     </div>
+
     <div id="results-display">
       <!-- A vue component to display all images found in the data returned by the search query in nasa's archive -->
       <image-results v-for="item in searchResults" v-bind:search_item="item"></image-results>
-      <p>No results found</p>
+      <p id="no-results"></p>
     </div>
+
+    <div id="image-metadata" style="visibility: hidden">
+      <p>Title: {{ imageData.imageTitle }}</p>
+      <p>Description: {{ imageData.imageDescription }}</p>
+      <p>Secondary Creator: {{ imageData.imageSecondaryCreator }}</p>
+      <p>NASA_id: {{ imageData.imageNasaId }}</p>
+      <p>Date: {{ imageData.imageDate }}</p>
+    </div>
+
   </div>
   <script src="vuescript.js"></script>
 

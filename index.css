@@ -3,7 +3,6 @@ html {
   margin: 0;
 }
 body {
-  background-color: lightblue;
   padding: 0px;
   margin: 0px;
 }
@@ -70,4 +69,9 @@ h1 {
 .image-result {
   height: 200px;
   margin: 5px;
+}
+
+#image-metadata {
+  background-color: white;
+
 }
